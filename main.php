@@ -11,6 +11,7 @@
         <a href="About.html"> About </a>
         <a href="Contact.html"> Contact us </a>
         <a href="Vakances.html"> Vakancies </a>
+        <a href="Cards.html"> Vakancies </a>
     </header>
     <main>
         <h2>Jobilese</h2>
