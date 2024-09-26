@@ -1,13 +1,55 @@
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
 
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: linear-gradient(45deg, #2196F3,#03A9F4);
+    padding: 10px 20px;
+}
+.nav-menu{
+    display: flex;
+    list-style: none;
+}
+.nav-menu li {
+    margin-right: 20px;
+}
+.nav-menu li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+.nav-menu li a:hover{
+    color: #ff483b;
+}
+.toggle-mode{
+    padding: 10px 20px;
+    background-color:#ff483b ;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+.toggle-mode:hover{
+    background-color: #c40404;
+}
 /* Header Styling */
 header {
-    background-color: #000000;
+    background-color: #4ea9ff;
     padding: 15px;
     text-align: center;
 }
@@ -94,15 +136,10 @@ footer {
     }
 }
 
-/* Target only the body with the class "cards-page" */
-.cards-page {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-}
+
 
 /* Grid container for cards, scoped inside "cards-page" */
-.cards-page .grid-container {
+ .grid-container {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -113,7 +150,7 @@ footer {
 }
 
 /* Individual card design inside "cards-page" */
-.cards-page .card {
+ .card {
     background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
@@ -121,39 +158,39 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cards-page .card:hover {
+ .card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Card image styling scoped inside "cards-page" */
-.cards-page .card img {
+ .card img {
     width: 100%;
     height: 500px;
     object-fit: cover;
 }
 
 /* Content inside the card, scoped inside "cards-page" */
-.cards-page .container {
+ .container {
     padding: 15px;
     text-align: center;
 }
 
-.cards-page .container h4 {
+ .container h4 {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
     color: #333;
 }
 
-.cards-page .container p {
+ .container p {
     font-size: 1rem;
     margin-bottom: 20px;
     color: #666;
 }
 
 /* Button styling scoped inside "cards-page" */
-.cards-page button {
+.button {
     background-color: #2196F3;
     border: none;
     color: white;
@@ -166,13 +203,51 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-.cards-page button:hover {
+ button:hover {
     background-color: #1976d2;
+}
+
+body.dark-mode {
+    background-color: #2c3e50;
+}
+
+body.dark-mode .navbar {
+    background: linear-gradient(45deg, #34495e, #2c3e50);
+}
+
+body.dark-mode .nav-menu li a {
+    color: #ecf0f1;
+}
+
+body.dark-mode .nav-menu li a:hover {
+    color: #e74c3c;
+}
+
+body.dark-mode .toggle-mode {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+body.dark-mode .grid-container {
+    background-color: #34495e;
+}
+
+body.dark-mode .card {
+    background-color: #2c3e50;
+}
+
+body.dark-mode .container h4,
+body.dark-mode .container p {
+    color: #ecf0f1;
 }
 
 /* Responsive adjustments for small screens, scoped inside "cards-page" */
 @media (max-width: 768px) {
-    .cards-page .grid-container {
+    .nav-menu{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .grid-container {
         grid-template-columns: 1fr;
     }
 }
