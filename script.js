@@ -28,5 +28,12 @@ function myFunction() {
 
 function closePopup(popupId) {
     let popup = document.getElementById(popupId);
-    popup.classList.remove('active');  // Hides the popup by removing 'active' class
+    popup.classList.remove('active');  
 }
+const hamMenu = document.querySelector(".ham-menu");
+const offScreenMenu = document.querySelector(".off-screen-menu");
+
+hamMenu.addEventListener("click", () => {
+    hamMenu.classList.toggle("active");
+    offScreenMenu.classList.toggle("active");
+});
