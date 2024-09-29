@@ -20,3 +20,13 @@ function myFunction() {
       }
     }
   }
+
+  function togglePopup(popupId) {
+    let popup = document.getElementById(popupId);
+    popup.classList.add('active');  // Shows the popup by adding 'active' class
+}
+
+function closePopup(popupId) {
+    let popup = document.getElementById(popupId);
+    popup.classList.remove('active');  // Hides the popup by removing 'active' class
+}
