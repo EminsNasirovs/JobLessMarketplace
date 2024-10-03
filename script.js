@@ -30,6 +30,7 @@ function closePopup(popupId) {
     let popup = document.getElementById(popupId);
     popup.classList.remove('active');  
 }
+
 const hamMenu = document.querySelector(".ham-menu");
 const offScreenMenu = document.querySelector(".off-screen-menu");
 
