@@ -150,6 +150,7 @@ aside p {
 
 .card:hover {
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
 }
 
 .card img {
@@ -214,54 +215,105 @@ footer {
 /* Dark Mode */
 body.dark-mode {
     background-color: #0a1c29;
-    color: #fff; /* Set text color to white in dark mode */
+    color: #fff; /* Set text color to white */
 }
 
-body.dark-mode header {
-    background-color: #0a1c29;
-    color: #fff; /* Ensure header text is white */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6, 
+body.dark-mode p, 
+body.dark-mode li, 
+body.dark-mode a {
+    color: #fff; /* Ensure all text elements are white */
 }
 
-body.dark-mode .navbar {
-    background-color: #0a1c29;
-}
-
-body.dark-mode .nav-menu li a {
-    color: #fff; /* Ensure nav menu links are white */
+body.dark-mode header,
+body.dark-mode .navbar,
+body.dark-mode aside,
+body.dark-mode footer {
+    background-color: #0a1c29; /* Background color for sections */
+    color: #fff; /* Ensure section text is white */
 }
 
 body.dark-mode .nav-menu li a:hover {
-    color: #ff4081; /* Pink accent in dark mode */
+    color: #ff4081; /* Pink hover accent for nav links */
 }
 
 body.dark-mode .toggle-mode {
-    background-color: #ff4081;
+    background-color: #ff4081; /* Pink for toggle button */
     color: white;
+}
+
+body.dark-mode .toggle-mode:hover {
+    background-color: #ff4081; /* Same color for hover on toggle in dark mode */
+}
+
+body.dark-mode .grid-container {
+    background-color: #0a1c29; /* Dark background for card container */
+}
+
+body.dark-mode .card {
+    background-color: #1c2a35;
+    color: #fff; /* Card text white */
+}
+
+body.dark-mode .card:hover {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Card hover effect */
+}
+
+body.dark-mode .container h4,
+body.dark-mode .container p {
+    color: #fff; /* Ensure card heading and paragraph text is white */
+}
+
+body.dark-mode .button,
+body.dark-mode .card button,
+body.dark-mode form button,
+body.dark-mode .popup button {
+    background-color: #ff4081; /* Pink buttons */
+    color: white;
+}
+
+body.dark-mode .button:hover,
+body.dark-mode .card button:hover,
+body.dark-mode form button:hover,
+body.dark-mode .popup button:hover {
+    background-color: #ff4081; /* Keep button hover the same in dark mode */
 }
 
 body.dark-mode aside {
     background-color: #1c2a35;
     color: #fff; /* Ensure aside text is white */
-    border-color: #ff4081;
+    border-color: #ff4081; /* Pink border accent */
 }
 
-body.dark-mode .grid-container {
-    background-color: #0a1c29;
+body.dark-mode .popup .content {
+    background-color: #1c2a35; /* Darker background for popups */
+    color: white;
 }
 
-body.dark-mode .card {
-    background-color: #1c2a35;
-    color: #fff; /* Ensure card text is white */
+body.dark-mode .popup h2 {
+    color: #ff4081; /* Pink for popup header */
 }
 
-body.dark-mode .container h4,
-body.dark-mode .container p {
-    color: #fff; /* Set card heading and paragraph text to white */
+body.dark-mode .popup p {
+    color: #ccc; /* Lighter text for popup readability in dark mode */
 }
 
-body.dark-mode footer {
-    background-color: #0a1c29;
-    color: white; /* Set footer text to white */
+body.dark-mode .popup.active {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+}
+body.dark-mode .off-screen-menu {
+    background-color: #0a1c29; /* Dark background for off-screen menu */
+    color: white; /* White text for off-screen menu */
+}
+body.dark-mode .dropdown-content {
+    background-color: #1c2a35; /* Darker background for dropdown */
+    color: white; /* White text for dropdown */
 }
 
 /* Responsive Design */
@@ -391,7 +443,7 @@ section ul li {
     background-color: rgba(0, 0, 0, 0.6); 
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+
 }
 
 .popup .content {
@@ -404,6 +456,7 @@ section ul li {
     overflow-y: auto; 
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
+  
 }
 
 
@@ -437,6 +490,7 @@ section ul li {
 .popup.active {
     display: flex; 
     animation: fadeIn 0.5s ease; 
+
 }
 
 @keyframes fadeIn {
