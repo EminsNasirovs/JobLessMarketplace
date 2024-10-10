@@ -1,12 +1,15 @@
-const toggleButton = document.querySelector('.toggle-mode');
-toggleButton.addEventListener('click', () => {
-document.body.classList.toggle('dark-mode');
-if (document.body.classList.contains('dark-mode')) {
-    toggleButton.textContent = 'Light Mode';
-} else {
-    toggleButton.textContent = 'Dark Mode';
-}
-});
+const toggleButtons = document.querySelectorAll('.toggle-mode');
+toggleButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode'); 
+    if (document.body.classList.contains('dark-mode')) {
+      button.textContent = 'Light Mode'; 
+    } else {
+      button.textContent = 'Dark Mode'; 
+    }
+  });
+})
+
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
