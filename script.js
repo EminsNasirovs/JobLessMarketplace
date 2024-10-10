@@ -11,7 +11,7 @@ function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
   
-  // Close the dropdown if the user clicks outside of it
+
   window.onclick = function(e) {
     if (!e.target.matches('.dropbtn')) {
     var myDropdown = document.getElementById("myDropdown");
@@ -23,7 +23,7 @@ function myFunction() {
 
   function togglePopup(popupId) {
     let popup = document.getElementById(popupId);
-    popup.classList.add('active');  // Shows the popup by adding 'active' class
+    popup.classList.add('active');  
 }
 
 function closePopup(popupId) {
