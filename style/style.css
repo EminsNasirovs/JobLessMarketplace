@@ -1,4 +1,4 @@
-/* Global Reset & Box Sizing */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #e3f2fd; /* Light blue background */
+    background-color: #e3f2fd; 
     color: #333;
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -20,7 +20,7 @@ body {
     justify-content: space-between;
     align-items: bottom;
     padding: 20px 40px;
-    background-color: #1976d2; /* Rich light blue */
+    background-color: #1976d2; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -43,7 +43,7 @@ body {
 
 .toggle-mode {
     padding: 10px 20px;
-    background-color: #ffca28; /* Soft yellow */
+    background-color: #ffca28;
     border: none;
     cursor: pointer;
     border-radius: 30px;
@@ -54,10 +54,10 @@ body {
 }
 
 .toggle-mode:hover {
-    background-color: #f57c00; /* Darker yellow on hover */
+    background-color: #f57c00;
 }
 
-/* Header Styling */
+
 header {
     background-color: #1976d2;
     padding: 15px;
@@ -76,14 +76,13 @@ header a:hover {
     text-decoration: underline;
 }
 
-/* Main Section Styling */
 main {
     padding: 30px;
     text-align: center;
 }
 
 main h2 {
-    color: #1976d2; /* Primary blue */
+    color: #1976d2; 
     font-size: 32px;
     margin-bottom: 10px;
 }
@@ -99,13 +98,13 @@ main img {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Aside Section Styling */
+
 aside {
-    background-color: #bbdefb; /* Light pastel lavender */
+    background-color: #bbdefb; 
     padding: 20px;
     margin: 20px auto;
     width: 90%;
-    border-left: 6px solid #1976d2; /* Blue accent */
+    border-left: 6px solid #1976d2; 
     border-radius: 10px;
 }
 
@@ -130,7 +129,7 @@ aside p {
     font-style: italic;
 }
 
-/* Card Container Styles */
+
 .grid-container {
     display: grid;
     gap: 30px;
@@ -139,7 +138,6 @@ aside p {
     background-color: #e3f2fd;
 }
 
-/* Card Styles */
 .card {
     background-color: white;
     border-radius: 15px;
@@ -185,7 +183,7 @@ aside p {
     transition: background-color 0.3s ease;
 }
 
-/* Button Styling */
+
 .button {
     background-color: #1976d2;
     color: white;
@@ -201,7 +199,7 @@ aside p {
     background-color: #1565c0;
 }
 
-/* Footer Styling */
+
 footer {
     background-color: #1976d2;
     text-align: center;
@@ -212,10 +210,10 @@ footer {
     width: 100%;
 }
 
-/* Dark Mode */
+
 body.dark-mode {
     background-color: #0a1c29;
-    color: #fff; /* Set text color to white */
+    color: #fff;
 }
 
 body.dark-mode h1, 
@@ -227,53 +225,53 @@ body.dark-mode h6,
 body.dark-mode p, 
 body.dark-mode li, 
 body.dark-mode a {
-    color: #fff; /* Ensure all text elements are white */
+    color: #fff; 
 }
 
 body.dark-mode header,
 body.dark-mode .navbar,
 body.dark-mode aside,
 body.dark-mode footer {
-    background-color: #0a1c29; /* Background color for sections */
-    color: #fff; /* Ensure section text is white */
+    background-color: #0a1c29; 
+    color: #fff; 
 }
 
 body.dark-mode .nav-menu li a:hover {
-    color: #ff4081; /* Pink hover accent for nav links */
+    color: #ff4081; 
 }
 
 body.dark-mode .toggle-mode {
-    background-color: #ff4081; /* Pink for toggle button */
+    background-color: #ff4081; 
     color: white;
 }
 
 body.dark-mode .toggle-mode:hover {
-    background-color: #ff4081; /* Same color for hover on toggle in dark mode */
+    background-color: #ff4081; 
 }
 
 body.dark-mode .grid-container {
-    background-color: #0a1c29; /* Dark background for card container */
+    background-color: #0a1c29; 
 }
 
 body.dark-mode .card {
     background-color: #1c2a35;
-    color: #fff; /* Card text white */
+    color: #fff; 
 }
 
 body.dark-mode .card:hover {
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Card hover effect */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); 
 }
 
 body.dark-mode .container h4,
 body.dark-mode .container p {
-    color: #fff; /* Ensure card heading and paragraph text is white */
+    color: #fff; 
 }
 
 body.dark-mode .button,
 body.dark-mode .card button,
 body.dark-mode form button,
 body.dark-mode .popup button {
-    background-color: #ff4081; /* Pink buttons */
+    background-color: #ff4081; 
     color: white;
 }
 
@@ -281,26 +279,25 @@ body.dark-mode .button:hover,
 body.dark-mode .card button:hover,
 body.dark-mode form button:hover,
 body.dark-mode .popup button:hover {
-    background-color: #ff4081; /* Keep button hover the same in dark mode */
+    background-color: #ff4081; 
 }
 
 body.dark-mode aside {
     background-color: #1c2a35;
-    color: #fff; /* Ensure aside text is white */
-    border-color: #ff4081; /* Pink border accent */
+    color: #fff; 
+    border-color: #ff4081; 
 }
 
 body.dark-mode .popup .content {
-    background-color: #1c2a35; /* Darker background for popups */
+    background-color: #1c2a35; 
     color: white;
 }
 
 body.dark-mode .popup h2 {
-    color: #ff4081; /* Pink for popup header */
+    color: #ff4081; 
 }
-
 body.dark-mode .popup p {
-    color: #ccc; /* Lighter text for popup readability in dark mode */
+    color: #ccc; 
 }
 
 body.dark-mode .popup.active {
@@ -308,15 +305,15 @@ body.dark-mode .popup.active {
     animation: fadeIn 0.5s ease;
 }
 body.dark-mode .off-screen-menu {
-    background-color: #0a1c29; /* Dark background for off-screen menu */
-    color: white; /* White text for off-screen menu */
+    background-color: #0a1c29; 
+    color: white; 
 }
 body.dark-mode .dropdown-content {
-    background-color: #1c2a35; /* Darker background for dropdown */
-    color: white; /* White text for dropdown */
+    background-color: #1c2a35; 
+    color: white; 
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -462,7 +459,7 @@ section ul li {
 
 .popup h2 {
     margin-bottom: 15px;
-    color: #1976d2; /* Primary blue color */
+    color: #1976d2;
 }
 
 .popup p {
