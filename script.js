@@ -11,19 +11,22 @@ toggleButtons.forEach((button) => {
 })
 
 function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
+  const dropdowns = document.querySelectorAll(".dropdown-content");
+  dropdowns.forEach(dropdown => {
+      dropdown.classList.toggle("show");
+  });
+}
 
-  window.onclick = function(e) {
-    if (!e.target.matches('.dropbtn')) {
-    var myDropdown = document.getElementById("myDropdown");
-      if (myDropdown.classList.contains('show')) {
-        myDropdown.classList.remove('show');
-      }
-    }
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+      const dropdowns = document.querySelectorAll(".dropdown-content");
+      dropdowns.forEach(dropdown => {
+          if (dropdown.classList.contains('show')) {
+              dropdown.classList.remove('show');
+          }
+      });
   }
-
+}
   function togglePopup(popupId) {
     let popup = document.getElementById(popupId);
     popup.classList.add('active');  
